@@ -1,0 +1,12 @@
+# Cargo
+/target
+/Cargo.lock
+
+# Node
+/node_modules
+
+# Misc
+.DS_Store
+
+# IDE
+.idea

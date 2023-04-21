@@ -1,0 +1,12 @@
+lockfileVersion: '6.0'
+
+dependencies:
+  neon:
+    specifier: ^2.0.0
+    version: 2.0.0
+
+packages:
+
+  /neon@2.0.0:
+    resolution: {integrity: sha512-maODYM+0IkYDPOD0VAuptjrAXowLAPLpRuBdTroj29ZpQWwtwehXAI6nQvb4+10qipE0ZwweVv2F0tuQvpIVFA==}
+    dev: false
