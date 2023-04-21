@@ -2,7 +2,7 @@
 
 `Versioning tool` based on [Semantic Versioning](https://semver.org) for NodeJS projects..
 
-<img src="images/logo.webp" width="1200"  alt="Logo">
+<img src="images/banner.webp" width="1200"  alt="Logo">
 
 [![Test](https://github.com/kettei-sproutty/lw-version/actions/workflows/test.yml/badge.svg)](https://github.com/kettei-sproutty/lw-version/actions/workflows/test.yml)
 
