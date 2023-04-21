@@ -2,7 +2,6 @@
 name = "lw-version"
 version = "0.1.0"
 edition = "2021"
-target = "x86_64-unknown-linux-gnu"
 readme = "README.md"
 
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html

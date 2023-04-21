@@ -1,7 +1,8 @@
+use crate::package_json::PackageJson;
 use anyhow::Result;
 use clap::{Parser, Subcommand};
+
 mod package_json;
-use crate::package_json::PackageJson;
 
 #[derive(Debug, Parser)]
 #[command(name = "lw-version")]
@@ -44,7 +45,7 @@ fn main() -> Result<()> {
     let args = Cli::parse();
     match args.command {
         Commands::Ci => {
-            let package_json = PackageJson::default();
+            let package_json = PackageJson::from(None);
             let (major, minor, patch) = package_json.parse_version().unwrap();
 
             println!("Major: {:?}, Minor: {:?}, Patch: {:?}", major, minor, patch);
