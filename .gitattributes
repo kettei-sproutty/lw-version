@@ -4,3 +4,5 @@
 *.md text eol=lf max-line-length 100
 *.yaml text=auto indent_size=2
 *.yml text=auto indent_size=2
+*.png binary
+*.webp binary
