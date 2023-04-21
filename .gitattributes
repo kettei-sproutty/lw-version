@@ -1,0 +1,6 @@
+* text eol=lf indent-with-spaces=true indent-size-4 max-line-length 120
+*.json indent_size=2
+*.rs text eol=lf max-line-length 100
+*.md text eol=lf max-line-length 100
+*.yaml text=auto indent_size=2
+*.yml text=auto indent_size=2
