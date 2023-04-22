@@ -1,20 +1,16 @@
 use crate::cli::{Cli, Commands};
-use crate::package_json::PackageJson;
-use anyhow::Result;
+use anyhow::{Context, Result};
 use clap::Parser;
+use git2::Repository;
 
 mod cli;
-mod package_json;
+mod git;
+mod manifests;
 
 fn main() -> Result<()> {
     let args = Cli::parse();
     match args.command {
-        Commands::Ci => {
-            let package_json = PackageJson::from(None);
-            let (major, minor, patch) = package_json.parse_version()?;
-
-            println!("Major: {:?}, Minor: {:?}, Patch: {:?}", major, minor, patch);
-        }
+        Commands::Ci => println!("Ci command!"),
         Commands::Major => println!("Major command!"),
         Commands::Minor => println!("Minor command!"),
         Commands::Patch => println!("Patch command!"),

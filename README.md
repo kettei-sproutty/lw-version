@@ -1,6 +1,9 @@
 # lw-version (WIP)
 
-`Versioning tool` based on [Semantic Versioning](https://semver.org) for NodeJS projects..
+## About
+`This project is very much a work in progress, and is not yet ready for use, and it will be not ready for a long time.`
+
+`Versioning tool` based on [Semantic Versioning](https://semver.org) for NodeJS projects.
 
 <img src="images/banner.webp" width="1200"  alt="Logo">
 
@@ -35,7 +38,7 @@ To generate a patch version number, you would use the following command:
 lw-version patch
 ```
 
-## Ci / Auto
+## Ci
 This command analyzes the commit history of the current branch and generates a semantic version number.
 
 ```bash
