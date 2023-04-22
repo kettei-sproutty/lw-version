@@ -1,5 +1,5 @@
-use anyhow::{Context, Result};
-use itertools::Itertools;
+use crate::utils::parse_version;
+use anyhow::Context;
 use serde::{Deserialize, Serialize};
 
 #[derive(Deserialize, Serialize)]
@@ -24,7 +24,7 @@ impl NodeManifest {
             .with_context(|| format!("Cannot deserialize {}", path))
             .unwrap();
 
-        let parsed_version = Self::parse_version(&package_json.version).unwrap();
+        let parsed_version = parse_version(&package_json.version).unwrap();
 
         Self {
             name: package_json.name,
@@ -36,25 +36,5 @@ impl NodeManifest {
 
     pub fn to_path(&self) {
         todo!()
-    }
-
-    pub fn parse_version(version: &str) -> Result<(String, String, String)> {
-        // todo: move inside utils
-        let (major, minor, patch) = version
-            .splitn(3, '.')
-            .into_iter()
-            .collect_tuple::<(&str, &str, &str)>()
-            .with_context(|| "Cannot parse version field")
-            .unwrap();
-
-        Ok((major.to_owned(), minor.to_owned(), patch.to_owned()))
-    }
-
-    pub fn join_version(parsed_version: (String, String, String)) -> String {
-        // todo: move inside utils
-        format!(
-            "{}.{}.{}",
-            parsed_version.0, parsed_version.1, parsed_version.2
-        )
     }
 }

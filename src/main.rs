@@ -1,11 +1,11 @@
 use crate::cli::{Cli, Commands};
-use anyhow::{Context, Result};
+use anyhow::Result;
 use clap::Parser;
-use git2::Repository;
 
 mod cli;
 mod git;
 mod manifests;
+mod utils;
 
 fn main() -> Result<()> {
     let args = Cli::parse();
